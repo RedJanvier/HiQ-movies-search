@@ -1,14 +1,16 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
   <v-container fluid>
     <v-row justify="space-around" class="my-10 flex">
-      <nav >
+      <nav>
         <ul>
           <li><RouterLink to="/">Home</RouterLink></li>
-          <li v-if="this.$store.state.searchResults.length"><RouterLink to="/search">Back to results</RouterLink></li>
+          <li v-if="this.$store.state.searchResults.length">
+            <RouterLink to="/search">Back to results</RouterLink>
+          </li>
           <li><RouterLink to="/bookmarks">Bookmarks</RouterLink></li>
         </ul>
       </nav>

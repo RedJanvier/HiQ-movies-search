@@ -1,33 +1,33 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import movieStore from './store/movies';
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import movieStore from "./store/movies";
 
-import './assets/main.css'
+import "./assets/main.css";
 
 // Vuetify
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
-import { aliases, mdi } from 'vuetify/iconsets/mdi'
+import "vuetify/styles";
+import { createVuetify } from "vuetify";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+import { aliases, mdi } from "vuetify/iconsets/mdi";
 
 const vuetify = createVuetify({
   components,
   directives,
   icons: {
-    defaultSet: 'mdi',
+    defaultSet: "mdi",
     aliases,
     sets: {
       mdi,
-    }
+    },
   },
-})
+});
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(router)
-app.use(vuetify)
-app.use(movieStore)
+app.use(router);
+app.use(vuetify);
+app.use(movieStore);
 
-app.mount('#app')
+app.mount("#app");
