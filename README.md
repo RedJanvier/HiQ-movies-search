@@ -1,35 +1,20 @@
 # HiQ-movies-search
 
-This template should help get you started developing with Vue 3 in Vite.
+The application to search for movies from [OMDB API](https://www.omdbapi.com/).
 
-## Recommended IDE Setup
+## Pre-requisites
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Make sure you have the following installed on your computer to continue.
+ - [Git](https://git-scm.com)
+ - [NodeJS & NPM](https://nodejs.org/en)
 
-## Customize configuration
+## Installation
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+1. Clone the repository
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
+git clone https://github.com/RedJanvier/HiQ-movies-search.git
+```
+2. Open the cloned folder in your terminal and start it by running:
+```
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
