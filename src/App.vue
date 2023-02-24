@@ -3,7 +3,8 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <v-container fluid>
+  <div class="landing_bg" v-if="this.$route.path === '/'"></div>
+  <v-container fluid v-if="this.$route.path !== '/'">
     <v-row justify="space-around" class="my-10 flex">
       <nav>
         <ul>
@@ -28,6 +29,14 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+
+.landing_bg {
+  background-image: url('/landing-page.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
 }
 
 nav {
