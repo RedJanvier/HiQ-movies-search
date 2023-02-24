@@ -8,3 +8,13 @@
   width: 80vw;
   text-align: center;
 }
+
+nav > ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+nav > ul li:not(:first-child) {
+  border-left: 1px solid black;
+}

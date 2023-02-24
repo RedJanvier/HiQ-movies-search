@@ -3,18 +3,17 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+  <v-container fluid>
+    <v-row justify="space-around" class="my-10 flex">
+      <nav >
+        <ul>
+          <li><RouterLink to="/">Home</RouterLink></li>
+          <li v-if="this.$store.state.searchResults.length"><RouterLink to="/search">Back to results</RouterLink></li>
+          <li><RouterLink to="/bookmarks">Bookmarks</RouterLink></li>
+        </ul>
       </nav>
-    </div>
-  </header> -->
+    </v-row>
+  </v-container>
   <RouterView />
 </template>
 
