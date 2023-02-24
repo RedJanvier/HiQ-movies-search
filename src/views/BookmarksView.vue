@@ -29,9 +29,9 @@ export default {
   <!-- Future improvements on filtering bookmarks -->
 
     <!-- <v-card
-    class="pa-4"
-    flat
-  >
+      class="pa-4"
+      flat
+    >
       <v-text-field
         hide-details="auto"
         label="Filter for a bookmark title..."

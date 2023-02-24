@@ -19,6 +19,7 @@ export default {
         append-inner-icon="mdi-magnify"
         label="Search for a movie here..."
         @click:append-inner="handleSearch"
+        @keydown.enter.prevent="handleSearch"
         v-model="this.$store.state.query"
       ></v-text-field>
     </v-card>
@@ -27,8 +28,7 @@ export default {
       style="text-align: center; color: crimson"
       v-if="
         this.$store.state.searchResults.length === 0 &&
-        this.$store.state.status !== 'PENDING' &&
-        this.$store.state.status === 'PENDING_MORE'
+        this.$store.state.status === 'ERROR'
       "
     >
       {{ this.$store.state.error || "No movies found for your query!" }}

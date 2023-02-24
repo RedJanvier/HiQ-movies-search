@@ -13,7 +13,7 @@ const store = createStore({
       page: 1,
       apiUrl: "https://www.omdbapi.com/",
       details: null,
-      Error: "",
+      error: "",
     };
   },
   mutations: {
@@ -58,6 +58,9 @@ const store = createStore({
     incrementPage(state) {
       state.page++;
     },
+    saveError(state, error) {
+      state.error = error;
+    },
     movieDetails(state, data) {
       state.details = data;
     },
@@ -84,7 +87,7 @@ const store = createStore({
       );
       const data = await res.json();
 
-      if (data.Response) {
+      if (data.Response === 'True') {
         commit("storeMovies", data, isNextPage);
         commit("updateStatus", "SUCCESS");
       } else {
@@ -126,6 +129,7 @@ const store = createStore({
         commit("updateStatus", "SUCCESS");
       } else {
         console.log("Error searching movies: ", data.Error);
+        commit("saveError", data.Error);
         commit("updateStatus", "ERROR");
       }
     },
